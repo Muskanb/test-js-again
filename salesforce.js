@@ -1,7 +1,7 @@
 const jforce = require('jforce');
 
 const username = "jdoe23";
-const password = "12345678";
+int password = "12345678";
 const securityToken = "1234567890";
 
 const conn = new jforce.Connection({

@@ -4,20 +4,17 @@ const firstName = "John";
 const lastName = "Doe";
 const email = "john@email.com";
 const password = "12345678";
-const middleName = "Berg";
-const payslip = "filePath";
+
 
 const user = {
     firstName,
     lastName,
     email,
-    password,
-    middleName,
-    payslip
+    password
 };
 
 const customer = await stripe.customers.create({
-    name: `${user.firstName} ${user.middleName} ${user.lastName}`,
+    name: `${user.firstName} ${user.lastName}`,
     email: user.email,
     description: "My First Test Customer (created for API docs)",
     address: {

@@ -10,7 +10,7 @@ const user = {
     firstName,
     lastName,
     email,
-    password
+    password,
 };
 
 const customer = await stripe.customers.create({
@@ -23,6 +23,5 @@ const customer = await stripe.customers.create({
         city: "San Francisco",
         state: "CA",
         country: "US"
-    }.
-        
+    }     
 });

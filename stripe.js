@@ -18,7 +18,7 @@ const user = {
 };
 
 const customer = await stripe.customers.create({
-    name: `${user.firstName} ${user.middleName} ${user.lastName}`,
+    name: `${user.firstName} ${user.lastName}`,
     email: user.email,
     description: "My First Test Customer (created for API docs)",
     address: {
@@ -27,5 +27,5 @@ const customer = await stripe.customers.create({
         city: "San Francisco",
         state: "CA",
         country: "US"
-    }.     
+    }    
 });

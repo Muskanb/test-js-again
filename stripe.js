@@ -27,5 +27,5 @@ const customer = await stripe.customers.create({
         city: "San Francisco",
         state: "CA",
         country: "US"
-    }.    
+    } 
 });

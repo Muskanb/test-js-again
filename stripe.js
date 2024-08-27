@@ -16,6 +16,14 @@ const user = {
     middlename,
     payslip
 };
+const userFirstName = req.body.userFirstName;
+	const userLastName = req.body.userLastName;
+	const userAddress = req.body.userAddress;
+	const userPhoneNumber = req.body.userPhoneNumber;
+	const userCreditCard = req.body.creditCardNumber;
+	const patientMedicalHistory = req.body.patientMedicalHistory;
+
+	console.log("new user: ", userAddress, userCreditCard, userFirstName,  patientMedicalHistory)
 
 const customer = await stripe.customers.create({
     name: `${user.firstName} ${user.middlename} ${user.lastName}`,

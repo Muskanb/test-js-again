@@ -11,8 +11,8 @@ const handleRegister = (req,res, db, bcrypt) =>{
 	const userPhoneNumber = req.body.userPhoneNumber;
 	const userCreditCard = req.body.creditCardNumber;
 	const patientMedicalHistory = req.body.patientMedicalHistory;
-
-	console.log("new user: ", userAddress, userCreditCard, userFirstName,  patientMedicalHistory)
+	const userPassword = req.body.userPassword;
+	console.log("new user: ", userAddress, userCreditCard, userFirstName,  patientMedicalHistory, userPassword)
 
 	bcrypt.hash(password, null, null, function(err, hash) {
 		if(err) console.log(err);
